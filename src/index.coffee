@@ -7,9 +7,9 @@ catch e
 module.directive 'swiper', ($timeout) ->
   restrict: 'AE'
   scope:
-    page: '='
-    nopages: '='
-    change: '='
+    page: '=?'
+    nopages: '=?'
+    change: '=?'
   link: (scope, elem, attrs) ->
     name = attrs.name
     scope.page = scope.page or 0

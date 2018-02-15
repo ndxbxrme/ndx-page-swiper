@@ -15,9 +15,9 @@
     return {
       restrict: 'AE',
       scope: {
-        page: '=',
-        nopages: '=',
-        change: '='
+        page: '=?',
+        nopages: '=?',
+        change: '=?'
       },
       link: function(scope, elem, attrs) {
         var hammerSwiper, name, setPage, swiper, x;

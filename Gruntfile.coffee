@@ -20,6 +20,10 @@ module.exports = (grunt) ->
           dest: 'build'
           ext: '.js'
         }]
+    stylus:
+      default:
+        files:
+          "build\/index.css": "src\/**\/*.stylus"
     clean:
       build: 'build'
     nodeunit:
@@ -27,6 +31,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'build', [
     'clean:build'
     'coffee'
+    'stylus'
   ]
   grunt.registerTask 'default', [
     'build'

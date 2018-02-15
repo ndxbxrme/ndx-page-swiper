@@ -1,0 +1,8 @@
+.ndx-swiper
+  display flex
+  position relative
+  &.animate
+    transition transform 0.4s ease-out
+  .swiper-page
+    min-width 100vw
+    width 100vw

@@ -1,6 +1,6 @@
 {
   "name": "ndx-page-swiper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "swipe between pages for ndx-framework apps",
   "main": "build/index.js",
   "scripts": {

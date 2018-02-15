@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../src/",
+  "sources": [
+    "index.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;EAAA;AAAA,MAAA,CAAA,EAAA;;EACA,MAAA,GAAS;;AACT;IACE,MAAA,GAAS,OAAO,CAAC,MAAR,CAAe,KAAf,EADX;GAAA,aAAA;IAEM;IACJ,MAAA,GAAS,OAAO,CAAC,MAAR,CAAe,iBAAf,EAAkC,EAAlC,EAHX;;AAFA",
+  "sourcesContent": [
+    "'use strict'\r\nmodule = null\r\ntry\r\n  module = angular.module 'ndx'\r\ncatch e\r\n  module = angular.module 'ndx-page-swiper', []\r\n"
+  ]
+}

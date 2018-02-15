@@ -23,7 +23,6 @@
         var hammerSwiper, name, setPage, swiper, x;
         name = attrs.name;
         scope.page = scope.page || 0;
-        scope.nopages = scope.nopages || 1;
         setPage = function(page) {
           return $timeout(function() {
             var oldPage;
@@ -58,6 +57,7 @@
           };
         }
         swiper = $(elem[0]);
+        scope.nopages = scope.nopages || swiper.children().length;
         swiper.addClass('ndx-swiper').css({
           transform: 'translate3d(' + -100 * scope.page + '%, 0, 0)'
         });

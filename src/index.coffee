@@ -13,7 +13,6 @@ module.directive 'swiper', ($timeout) ->
   link: (scope, elem, attrs) ->
     name = attrs.name
     scope.page = scope.page or 0
-    scope.nopages = scope.nopages or 1
     setPage = (page) ->
       $timeout ->
         oldPage = scope.page
@@ -38,6 +37,7 @@ module.directive 'swiper', ($timeout) ->
         goToPage: (page) ->
           setPage page
     swiper = $ elem[0]
+    scope.nopages = scope.nopages or swiper.children().length
     swiper
     .addClass 'ndx-swiper'
     .css

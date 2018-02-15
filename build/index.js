@@ -11,9 +11,7 @@
     module = angular.module('ndx', []);
   }
 
-  console.log('loading');
-
-  moodule.directive('swiper', function($timeout) {
+  module.directive('swiper', function($timeout) {
     return {
       restrict: 'AE',
       scope: {
@@ -23,7 +21,6 @@
       },
       link: function(scope, elem, attrs) {
         var hammerSwiper, name, setPage, swiper, x;
-        console.log('linking');
         name = attrs.name;
         setPage = function(page) {
           return $timeout(function() {

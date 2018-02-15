@@ -4,15 +4,13 @@ try
   module = angular.module 'ndx'
 catch e
   module = angular.module 'ndx', []
-console.log 'loading'
-moodule.directive 'swiper', ($timeout) ->
+module.directive 'swiper', ($timeout) ->
   restrict: 'AE'
   scope:
     page: '='
     nopages: '='
     change: '='
   link: (scope, elem, attrs) ->
-    console.log 'linking'
     name = attrs.name
     setPage = (page) ->
       $timeout ->

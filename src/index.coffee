@@ -4,6 +4,7 @@ try
   module = angular.module 'ndx'
 catch e
   module = angular.module 'ndx', []
+console.log 'loading'
 moodule.directive 'swiper', ($timeout) ->
   restrict: 'AE'
   scope:
@@ -11,6 +12,7 @@ moodule.directive 'swiper', ($timeout) ->
     nopages: '='
     change: '='
   link: (scope, elem, attrs) ->
+    console.log 'linking'
     name = attrs.name
     setPage = (page) ->
       $timeout ->

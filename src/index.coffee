@@ -12,6 +12,8 @@ module.directive 'swiper', ($timeout) ->
     change: '='
   link: (scope, elem, attrs) ->
     name = attrs.name
+    scope.page = scope.page or 0
+    scope.nopages = scope.nopages or 1
     setPage = (page) ->
       $timeout ->
         oldPage = scope.page
@@ -26,7 +28,7 @@ module.directive 'swiper', ($timeout) ->
         .css
           transform: 'translate3d(' + -100 * scope.page + '%, 0, 0)'
         if oldPage isnt scope.page
-          scope.change scope.page
+          scope.change? scope.page
           if $('html, body').scrollTop()
             $('html, body').animate
               scrollTop: 0

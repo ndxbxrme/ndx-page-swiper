@@ -22,6 +22,8 @@
       link: function(scope, elem, attrs) {
         var hammerSwiper, name, setPage, swiper, x;
         name = attrs.name;
+        scope.page = scope.page || 0;
+        scope.nopages = scope.nopages || 1;
         setPage = function(page) {
           return $timeout(function() {
             var oldPage;
@@ -37,7 +39,9 @@
               transform: 'translate3d(' + -100 * scope.page + '%, 0, 0)'
             });
             if (oldPage !== scope.page) {
-              scope.change(scope.page);
+              if (typeof scope.change === "function") {
+                scope.change(scope.page);
+              }
               if ($('html, body').scrollTop()) {
                 return $('html, body').animate({
                   scrollTop: 0

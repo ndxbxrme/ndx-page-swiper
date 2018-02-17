@@ -1,11 +1,17 @@
 .ndx-swiper
-  display flex
-  position relative
-  height 100%
-  &.animate
-    transition transform 0.4s ease-out
-  .swiper-page
-    box-sizing border-box
-    min-width 100%
-    width 100%
-    min-height 100%
+  background red
+  overflow-x hidden
+  transform scale(0.1)
+  .ndx-swiper-inner
+    position relative
+    height 100%
+    &.animate
+      transition transform 0.4s ease-out
+    ng-transclude
+      display flex
+      position relative
+      .swiper-page
+        box-sizing border-box
+        min-width 100%
+        width 100%
+        min-height 100%
